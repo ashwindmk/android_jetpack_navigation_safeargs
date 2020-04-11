@@ -27,5 +27,9 @@
             android:name="message"
             app:argType="string"
             android:defaultValue="Hello world" />
+        <argument
+            android:name="user"
+            app:argType="com.ashwin.android.jetpacknavigationsafeargs.User"
+            app:nullable="true" />
     </fragment>
 </navigation>

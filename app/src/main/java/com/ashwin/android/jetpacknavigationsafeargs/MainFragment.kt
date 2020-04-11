@@ -23,7 +23,9 @@ class MainFragment : Fragment() {
         next_button.setOnClickListener {
             val message = message_edittext.text.toString()
 
-            val action = MainFragmentDirections.actionMainFragmentToNextFragment(message)
+            val user = User(1, "John Doe")
+
+            val action = MainFragmentDirections.actionMainFragmentToNextFragment(message, user)
 
             navController.navigate(action)
         }

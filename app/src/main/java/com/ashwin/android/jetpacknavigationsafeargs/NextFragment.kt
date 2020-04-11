@@ -15,10 +15,11 @@ class NextFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Get the safe-args (String) message
+        // Get the safe-args (String) message and (User) user
         val args: NextFragmentArgs = NextFragmentArgs.fromBundle(arguments ?: Bundle.EMPTY)
         val message = args.message
+        val user = args.user
 
-        message_textview.text = message
+        message_textview.text = "$message $user"
     }
 }
